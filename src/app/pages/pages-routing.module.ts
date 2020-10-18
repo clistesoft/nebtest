@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CanvasComponent } from './canvas/canvas.component';
 
 const routes: Routes = [{
   path: '',
@@ -11,6 +12,14 @@ const routes: Routes = [{
     {
       path: 'dashboard',
       component: DashboardComponent,
+    },
+    {
+      path: 'board',
+      component: CanvasComponent,
+    },
+    {
+      path: 'board/:id',
+      component: CanvasComponent,
     },
     {
       path: '',

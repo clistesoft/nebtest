@@ -1,0 +1,11 @@
+@import '../@theme/styles/themes';
+
+@include nb-install-component() {
+  ::ng-deep router-outlet + * {
+    display: flex;
+  }
+  nb-card.ctrl-box{
+    position: absolute;
+  }
+}
+
