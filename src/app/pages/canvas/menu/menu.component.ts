@@ -1,4 +1,10 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'ngx-menu',
@@ -8,18 +14,14 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 export class MenuComponent implements OnInit, OnChanges {
   public activeButton;
 
-  constructor() { }
+  constructor() {}
   @Input() mode: string;
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    //Add '${implements OnChanges}' to the class.
+    // Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+    // Add '${implements OnChanges}' to the class.
     console.log('changed in menu', this.mode);
-
-
-
   }
 }
