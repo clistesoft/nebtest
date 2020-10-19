@@ -1,8 +1,24 @@
-<nb-card class="position-absolute" style="left: 0; top: 0;">
+<nb-card class="position-absolute" style="left: 0; top: 0">
   <nb-card-body class="d-flex flex-column p-1">
-    <button class="mb-1" nbButton size="medium" status="primary"><nb-icon icon="navigation"></nb-icon></button>
-    <button class="mb-1" nbButton size="medium" status="basic"><nb-icon icon="marker" pack="bord"></nb-icon></button>
-    <button nbButton size="medium" status="basic"><nb-icon icon="text"></nb-icon></button>
+    <button
+      class="mb-1"
+      nbButton
+      size="medium"
+      [status]="mode === 'selection' ? 'primary' : 'basic'"
+    >
+      <nb-icon icon="navigation"></nb-icon>
+    </button>
+    <button
+      class="mb-1"
+      nbButton
+      size="medium"
+      [status]="mode === 'drawing' ? 'primary' : 'basic'"
+    >
+      <nb-icon icon="marker" pack="bord"></nb-icon>
+    </button>
+    <button nbButton size="medium" status="basic">
+      <nb-icon icon="text"></nb-icon>
+    </button>
   </nb-card-body>
-  {{key}}
+  {{ mode }}
 </nb-card>

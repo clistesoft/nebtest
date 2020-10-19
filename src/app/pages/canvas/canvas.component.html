@@ -1,13 +1,15 @@
 <div class="d-flex position-relative justify-content-center align-items-center" style="height: calc(100vh - 124px);">
-  <ngx-menu [key]="keypressed"></ngx-menu>
+  <ngx-menu [mode]="bordCanvasMode"></ngx-menu>
+
 
   <nb-card class="m-0">
     <nb-card-body class="p-0">
-      <canvas id="canvasBord" width="1200" height="800"></canvas>
+      <ngx-fabric [mode]="bordCanvasMode"></ngx-fabric>
     </nb-card-body>
   </nb-card>
   <div class="position-absolute" style="bottom: 0; left: 0; right: 0;">
     cavasId: <span class="badge badge-warning">{{cavasId}} </span>
     keypressed: <span class="badge badge-warning">{{keypressed}} </span>
+    canvas Mode: <span class="badge badge-success">{{bordCanvasMode}} </span>
   </div>
 </div>
